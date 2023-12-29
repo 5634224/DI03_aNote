@@ -75,7 +75,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.santiago.di03_anote/com.santiago.di03_anote.HelloApplication</mainClass>
+                            <mainClass>com.santiago.di03_anote/com.santiago.di03_aNote.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
