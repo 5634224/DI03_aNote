@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="900.0" prefHeight="730.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.santiago.di03_aNote.aNoteController">
+   <children>
+      <MenuBar layoutX="46.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="menuItemAbrir" mnemonicParsing="false" text="Abrir">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/abrir archivo/1x/baseline_file_open_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="menuItemGuardar" mnemonicParsing="false" text="Guardar">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/guardar/1x/baseline_save_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemGuardarComo" mnemonicParsing="false" text="Guardar como...">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/guardar como/1x/baseline_save_as_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemImprimir" mnemonicParsing="false" text="Imprimir">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/impresora/1x/baseline_print_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemCerrar" mnemonicParsing="false" text="Cerrar">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/cerrar/1x/baseline_close_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem fx:id="menuItemSeleccionarTodo" mnemonicParsing="false" text="Seleccionar todo">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/seleccionar todo/1x/baseline_select_all_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemCopiar" mnemonicParsing="false" text="Copiar">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/copiar/1x/baseline_content_copy_black_24dp.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemCortar" mnemonicParsing="false" text="Cortar">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/cortar/1x/baseline_content_cut_black_24dp.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemPegar" mnemonicParsing="false" text="Pegar">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/pegar/1x/baseline_content_paste_black_24dp.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="menuItemAcercaDe" mnemonicParsing="false" text="Acerca de">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                           <image>
+                              <Image url="@img/info/1x/baseline_info_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="27.0" prefHeight="146.0" prefWidth="1042.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <tabs>
+          <Tab text="Inicio">
+            <content>
+                  <HBox prefHeight="21.0" prefWidth="1042.0" styleClass="hbox-ribbon-menu">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="120.0">
+                           <children>
+                              <Button fx:id="btnPegar" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="61.0" styleClass="boton-gris-rounded" text="Pegar" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/pegar/2x/baseline_content_paste_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Pegar" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnCopiar" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="87.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER" AnchorPane.rightAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/copiar/1x/baseline_content_copy_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Copiar" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnCortar" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="88.0" layoutY="44.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER" AnchorPane.rightAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/cortar/1x/baseline_content_cut_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Cortar" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="26.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Portapapeles" AnchorPane.bottomAnchor="0.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="105.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="btnNegrita" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="37.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/negrita/1x/baseline_format_bold_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Negrita" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="93.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Fuente" AnchorPane.bottomAnchor="0.0" />
+                              <Button fx:id="btnCursiva" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="42.0" layoutY="37.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/cursiva/1x/baseline_format_italic_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Cursiva" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnSubrayado" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="84.0" layoutY="37.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/subrayado/1x/baseline_format_underlined_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Subrayado" />
+                                 </tooltip>
+                              </Button>
+                              <ComboBox fx:id="comboBoxFuente" layoutX="9.0" layoutY="2.0" prefWidth="150.0" styleClass="boton-gris-rounded" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Fuente" />
+                                 </tooltip>
+                              </ComboBox>
+                              <ComboBox fx:id="comboBoxTamanoFuente" layoutX="160.0" prefHeight="28.0" prefWidth="72.0" styleClass="boton-gris-rounded" AnchorPane.rightAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Tamaño de fuente" />
+                                 </tooltip></ComboBox>
+                              <ColorPicker layoutX="157.0" layoutY="39.0" prefHeight="32.0" prefWidth="66.0" styleClass="boton-gris-rounded" AnchorPane.rightAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Color del texto" />
+                                 </tooltip>
+                              </ColorPicker>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="160.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="181.0" layoutY="15.0" prefHeight="105.0" prefWidth="223.0">
+                           <children>
+                              <Label layoutX="101.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Parrafo" AnchorPane.bottomAnchor="0.0" />
+                              <Button fx:id="btnDisminuirSangria" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="37.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/disminuir sangria/1x/baseline_format_indent_decrease_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Disminuir sangría" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnAumentarSangria" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="43.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/aumentar sangria/1x/baseline_format_indent_increase_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Aumentar sangría" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnUnorderedList" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="86.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/unordered list/1x/baseline_format_list_bulleted_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Viñeta (lista no numerada)" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnOrderedList" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="130.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/ordered list/1x/baseline_format_list_numbered_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Lista numerada" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnAlinearIzquierda" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="-2.0" layoutY="40.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                 <tooltip>
+                                    <Tooltip text="Alinear texto a la izquierda" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/alinear texto izq/1x/baseline_format_align_left_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnAlinearCentrado" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="43.0" layoutY="40.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="Centrar texto" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/alinear texto centro/1x/baseline_format_align_center_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnAlinearDerecha" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="86.0" layoutY="40.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="Alinear texto a la derecha" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/alinear texto der/1x/baseline_format_align_right_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnAlinearJustificado" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="130.0" layoutY="40.0" minWidth="32.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="32.0" styleClass="boton-gris-rounded" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="Justificar texto" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/texto justificado/1x/baseline_format_align_justify_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <MenuButton graphicTextGap="0.0" layoutX="175.0" layoutY="40.0" mnemonicParsing="false" styleClass="boton-gris-rounded">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="1.0" />
+                                  <MenuItem mnemonicParsing="false" text="1.15" />
+                                    <MenuItem mnemonicParsing="false" text="1.5" />
+                                    <MenuItem mnemonicParsing="false" text="2.0" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" text="Opciones de interlineado avanzadas">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                             <image>
+                                                <Image url="@img/settings/1x/baseline_settings_black_24dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </MenuItem>
+                                </items>
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                       <image>
+                                          <Image url="@img/interlineado texto/1x/baseline_format_line_spacing_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Interlineado" />
+                                 </tooltip>
+                              </MenuButton>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="419.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="440.0" layoutY="15.0" prefHeight="105.0" prefWidth="69.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Busqueda" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="9.0" />
+                              <Button fx:id="btnBuscar" contentDisplay="TOP" layoutX="22.0" layoutY="14.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="69.0" styleClass="boton-gris-rounded" text="Buscar" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/busqueda/2x/baseline_search_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Buscar en el documento" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="799.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+            </content>
+          </Tab>
+            <Tab text="Insertar">
+               <content>
+                  <HBox prefHeight="21.0" prefWidth="1042.0" styleClass="hbox-ribbon-menu">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="120.0">
+                           <children>
+                              <Button fx:id="btnInsertarSaltoPagina" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="131.0" styleClass="boton-gris-rounded" text="Salto de página" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/salto de pagina/2x/baseline_insert_page_break_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Salto de página" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="48.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Página" AnchorPane.bottomAnchor="0.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="25.0" layoutY="15.0" prefHeight="105.0" prefWidth="71.0">
+                           <children>
+                              <Button fx:id="btnInsertarTabla" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Tabla" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/tabla/2x/baseline_table_chart_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Tabla" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="20.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Tablas" AnchorPane.bottomAnchor="0.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="171.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane prefHeight="105.0" prefWidth="202.0">
+                           <children>
+                              <Label layoutX="90.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Ilustraciones" AnchorPane.bottomAnchor="0.0" />
+                              <Button fx:id="btnInsertarImagen" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Imagen" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/insertar img/2x/baseline_image_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Insertar imagen" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnInsertarFotografia" contentDisplay="TOP" layoutX="85.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="95.0" styleClass="boton-gris-rounded" text="Tomar foto" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/camara/2x/baseline_photo_camera_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Tomar instantánea con la cámara" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnInsertarGrafico" contentDisplay="TOP" layoutX="191.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Gráfico" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/insertar graficos/2x/baseline_add_chart_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Insertar gráfico" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane prefHeight="105.0" prefWidth="52.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Vínculos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" />
+                              <Button fx:id="btnInsertarHipervinculo" contentDisplay="TOP" layoutX="22.0" layoutY="14.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="77.0" styleClass="boton-gris-rounded" text="Vínculo" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/hipervinculo/2x/baseline_add_link_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Insertar hipervínculo" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="585.0" layoutY="15.0" prefHeight="105.0" prefWidth="69.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Símbolos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" />
+                              <Button fx:id="btnInsertarSimbolo" contentDisplay="TOP" layoutX="22.0" layoutY="14.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="78.0" styleClass="boton-gris-rounded" text="Símbolo" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/simbolos/2x/baseline_emoji_symbols_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Insertar símbolo" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="669.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Ver">
+               <content>
+                  <HBox prefHeight="21.0" prefWidth="1042.0" styleClass="hbox-ribbon-menu">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="120.0">
+                           <children>
+                              <Button fx:id="btnZoomAcercar" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Acercar" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom in/2x/baseline_zoom_in_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Acercar zoom" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="107.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Zoom" AnchorPane.bottomAnchor="0.0" />
+                              <Button fx:id="btnZoomAlejar" contentDisplay="TOP" layoutX="85.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Alejar" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom in/2x/baseline_zoom_in_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Alejar zoom" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnZoom100x100" contentDisplay="TOP" layoutX="170.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="100%" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom 100x100/2x/baseline_fit_screen_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Zoom 100%" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="25.0" layoutY="15.0" prefHeight="105.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Mostrar u ocultar" AnchorPane.bottomAnchor="0.0" />
+                              <CheckBox fx:id="checkBoxRegla" layoutY="5.0" mnemonicParsing="false" selected="true" text="Regla" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Regla" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxBarraEstado" layoutY="24.0" mnemonicParsing="false" selected="true" text="Barra de estado">
+                                 <tooltip>
+                                    <Tooltip text="Barra de estado" />
+                                 </tooltip>
+                              </CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="171.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Ver">
+               <content>
+                  <HBox prefHeight="21.0" prefWidth="1042.0" styleClass="hbox-ribbon-menu">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="120.0">
+                           <children>
+                              <Button fx:id="btnZoomAcercar1" contentDisplay="TOP" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Acercar" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom in/2x/baseline_zoom_in_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Acercar zoom" />
+                                 </tooltip>
+                              </Button>
+                              <Label layoutX="107.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Zoom" AnchorPane.bottomAnchor="0.0" />
+                              <Button fx:id="btnZoomAlejar1" contentDisplay="TOP" layoutX="85.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="Alejar" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom in/2x/baseline_zoom_in_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Alejar zoom" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnZoom100x1001" contentDisplay="TOP" layoutX="170.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="74.0" styleClass="boton-gris-rounded" text="100%" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-big">
+                                       <image>
+                                          <Image url="@img/zoom 100x100/2x/baseline_fit_screen_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Zoom 100%" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane layoutX="25.0" layoutY="15.0" prefHeight="105.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Mostrar u ocultar" AnchorPane.bottomAnchor="0.0" />
+                              <CheckBox fx:id="checkBoxRegla1" layoutY="5.0" mnemonicParsing="false" selected="true" text="Regla" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Regla" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxBarraEstado1" layoutY="24.0" mnemonicParsing="false" selected="true" text="Barra de estado">
+                                 <tooltip>
+                                    <Tooltip text="Barra de estado" />
+                                 </tooltip>
+                              </CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Separator layoutX="171.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <StackPane layoutY="174.0" prefHeight="531.0" prefWidth="1042.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="174.0">
+         <children>
+            <TabPane fx:id="tbBlocs" prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Bloc de notas 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane fx:id="tbBloc1_paginas" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab text="Vuelos">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
+                                             <children>
+                                                <TextField fx:id="txtBloc1_pag1_titulo" onKeyTyped="#txtBloc1_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Avion 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font size="47.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                   <padding>
+                                                      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                                   </padding>
+                                                </TextArea>
+                                                <VBox prefHeight="200.0" prefWidth="200.0" styleClass="back-barra-estado" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="boton-gris-rounded" text="Nueva página">
+                                                         <graphic>
+                                                            <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                                               <image>
+                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <VBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <TreeView fx:id="treeBloc1Pagina1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Meteorologia">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
+                                             <children>
+                                                <TextField fx:id="txtBloc1_pag2_titulo" onKeyTyped="#txtBloc1_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Hoy" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font size="47.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                   <padding>
+                                                      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                                   </padding>
+                                                </TextArea>
+                                                <VBox prefHeight="200.0" prefWidth="200.0" styleClass="back-barra-estado" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="boton-gris-rounded" text="Nueva página">
+                                                         <graphic>
+                                                            <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                                               <image>
+                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <VBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <TreeView fx:id="treeBloc1Pagina2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Bloc de notas 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane fx:id="tbBloc2_paginas" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab text="Proyecto">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
+                                             <children>
+                                                <TextField fx:id="txtBloc2_pag1_titulo" onKeyTyped="#txtBloc2_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Idea 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font size="47.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                   <padding>
+                                                      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                                   </padding>
+                                                </TextArea>
+                                                <VBox prefHeight="200.0" prefWidth="200.0" styleClass="back-barra-estado" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="boton-gris-rounded" text="Nueva página">
+                                                         <graphic>
+                                                            <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                                               <image>
+                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <VBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <TreeView fx:id="treeBloc2Pagina1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="FCT">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
+                                             <children>
+                                                <TextField fx:id="txtBloc2_pag2_titulo" onKeyTyped="#txtBloc2_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Empresa 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font size="47.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                   <padding>
+                                                      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                                   </padding>
+                                                </TextArea>
+                                                <VBox prefHeight="200.0" prefWidth="200.0" styleClass="back-barra-estado" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="boton-gris-rounded" text="Nueva página">
+                                                         <graphic>
+                                                            <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
+                                                               <image>
+                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <VBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <TreeView fx:id="treeBloc2Pagina2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="182.0" layoutY="616.0" maxHeight="-Infinity" prefHeight="27.0" prefWidth="1042.0" styleClass="back-barra-estado" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Slider layoutX="852.0" layoutY="6.0" value="30.0" AnchorPane.rightAnchor="50.0" />
+            <Label layoutX="996.0" layoutY="6.0" text="100%" AnchorPane.rightAnchor="8.0" />
+            <Button mnemonicParsing="false" styleClass="boton-gris" text="Español (España)" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+/*=================== REGLAS GENERALES ===================*/
+* {
+    -fx-font-family: Arial;
+    -fx-font-size: medium;
+}
+
+.main-backcolor {
+    -fx-background-color: #aaa !important;
+}
+
+/*=================== REGLAS DE COMPONENTES COMUNES ===================*/
+.boton-gris {
+    -fx-background-color: #dfdfdf;
+    -fx-border-color: #bbb;
+    -fx-border-width: 0px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 5px;
+    /*-fx-min-width: 130px;*/
+    /*-fx-pref-height: 40px;*/
+    -fx-cursor: hand;
+}
+
+.boton-gris:hover {
+    -fx-background-color: #ccc;
+    -fx-border-color: #aaa;
+}
+
+.boton-gris:pressed {
+    -fx-background-color: #aaa;
+    -fx-border-color: #999;
+}
+
+.boton-gris-rounded {
+    -fx-background-color: #dfdfdf;
+    -fx-border-color: #bbb;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    /*-fx-min-width: 130px;*/
+    /*-fx-pref-height: 40px;*/
+    -fx-cursor: hand;
+}
+
+.boton-gris-rounded:hover {
+    -fx-background-color: #ccc;
+    -fx-border-color: #aaa;
+}
+
+.boton-gris-rounded:pressed {
+    -fx-background-color: #aaa;
+    -fx-border-color: #999;
+}
+
+.img-small {
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+    -fx-fit-to-width: 24px;
+    -fx-fit-to-height: 24px;
+    -fx-fill-width: 24px;
+    -fx-fill-height: 24px;
+
+}
+
+.img-big {
+    -fx-pref-width: 48px;
+    -fx-pref-height: 48px;
+    -fx-fit-to-width: 48px;
+    -fx-fit-to-height: 48px;
+}
+
+.back-barra-estado {
+    -fx-background-color: #dfdfdf;
+}
+
+.texto-descripcion-seccion {
+    -fx-font-size: 0.8em;
+}
+
+.hbox-ribbon-menu {
+    -fx-background-radius: 1em;
+    -fx-background-color: #cfcfdf;
+}
+
+/*=============== REGLAS DE COMPONENTES CONCRETOS ===============*/
+.slider {
+    -fx-background-color: #dfdfdf;
+    -fx-border-color: #bbb;
+    -fx-border-width: 0px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.text-field-titulo {
+    -fx-font-size: 24px;
+}

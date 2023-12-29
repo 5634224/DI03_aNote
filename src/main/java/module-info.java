@@ -5,6 +5,6 @@ module com.santiago.di03_anote {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
 
-    opens com.santiago.di03_anote to javafx.fxml;
-    exports com.santiago.di03_anote;
+    opens com.santiago.di03_aNote to javafx.fxml;
+    exports com.santiago.di03_aNote;
 }
