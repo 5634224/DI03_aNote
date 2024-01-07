@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Proyecto restaurado">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Blocs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Blocs.java.new" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/aNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="No se donde me quedé" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +57,7 @@
       <workItem from="1703856378252" duration="1152000" />
       <workItem from="1703882922665" duration="2950000" />
       <workItem from="1703939239459" duration="5109000" />
-      <workItem from="1703958472235" duration="17803000" />
+      <workItem from="1703958472235" duration="17839000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <option name="closed" value="true" />
@@ -92,7 +83,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703882983662</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="No se donde me quedé">
+      <option name="closed" value="true" />
+      <created>1704629755132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704629755132</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix" />
     <MESSAGE value="Proyecto restaurado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto restaurado" />
+    <MESSAGE value="No se donde me quedé" />
+    <option name="LAST_COMMIT_MESSAGE" value="No se donde me quedé" />
   </component>
 </project>
