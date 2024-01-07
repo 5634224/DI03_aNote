@@ -7,4 +7,6 @@ module com.santiago.di03_anote {
 
     opens com.santiago.di03_aNote to javafx.fxml;
     exports com.santiago.di03_aNote;
+    exports com.santiago.di03_aNote.controlador;
+    opens com.santiago.di03_aNote.controlador to javafx.fxml;
 }

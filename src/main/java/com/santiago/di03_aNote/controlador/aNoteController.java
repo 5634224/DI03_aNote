@@ -1,5 +1,7 @@
-package com.santiago.di03_aNote;
+package com.santiago.di03_aNote.controlador;
 
+import com.santiago.di03_aNote.Escenario;
+import com.santiago.di03_aNote.modelo.Blocs;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +16,7 @@ import java.util.ResourceBundle;
 public class aNoteController implements Initializable {
 
     /*===================== CAMPOS MIOS =====================*/
-    private ArrayList<ArrayList<HashMap<String, String>>> blocs = new ArrayList<>();
+    Blocs blocs = new Blocs(new ArrayList<>());
 
     /*===================== CAMPOS SCENEBUILDER =====================*/
     private Escenario stage;
@@ -128,6 +130,14 @@ public class aNoteController implements Initializable {
     private TreeView treeBloc2Pagina1;
     @FXML
     private TreeView treeBloc2Pagina2;
+    @FXML
+    private TextArea txtBloc1_pag1_contenido;
+    @FXML
+    private TextArea txtBloc1_pag2_contenido;
+    @FXML
+    private TextArea txtBloc2_pag1_contenido;
+    @FXML
+    private TextArea txtBloc2_pag2_contenido;
 
     /*==================== MÉTODOS ====================*/
     public void setStage(Escenario stage) {
@@ -144,14 +154,31 @@ public class aNoteController implements Initializable {
         comboBoxTamanoFuente.getItems().addAll("8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "28", "32", "36", "40", "44", "48", "54", "60", "66", "72", "80", "88", "96");
         comboBoxTamanoFuente.getSelectionModel().select(4);
 
+        // Agregamos al modelo de datos los datos de los blocs de notas
+        blocs.blocs().add(new ArrayList<>());
+        blocs.blocs().add(new ArrayList<>());
+
+        // Inicializamos las secciones en el modelo de datos
+        blocs.blocs().get(0).add(new HashMap<>()); // Seccion Vuelos (bloc 1)
+        blocs.blocs().get(0).add(new HashMap<>()); // Seccion Meteorologia (bloc 1)
+        blocs.blocs().get(1).add(new HashMap<>()); // Seccion Proyecto (bloc 2)
+        blocs.blocs().get(1).add(new HashMap<>()); // Seccion FCT (bloc 2)
+
         // Rellenamos los TreeView de las paginas de los blocs de notas
-        initializeTreeBloc1Pagina1();
-        initializeTreeBloc1Pagina2();
-        initializeTreeBloc2Pagina1();
-        initializeTreeBloc2Pagina2();
+        initializeTreeBloc1Seccion1Pagina1(); // Pagina Avion 1 (bloc 1, seccion 1)
+        initializeTreeBloc1Seccion1Pagina2(); // Pagina Avion 2 (bloc 1, seccion 1)
+        initializeTreeBloc1Seccion2Pagina1(); // Pagina Hoy (bloc 1, seccion 2)
+        initializeTreeBloc1Seccion2Pagina2(); // Pagina Mañana (bloc 1, seccion 2)
+        initializeTreeBloc2Seccion1Pagina1(); // Pagina Idea 1 (bloc 2, seccion 1)
+        initializeTreeBloc2Seccion1Pagina2(); // Pagina Idea 2 (bloc 2, seccion 1)
+        initializeTreeBloc2Seccion2Pagina1(); // Pagina Empresa 1 (bloc 2, seccion 2)
+        initializeTreeBloc2Seccion2Pagina2(); // Pagina Empresa 2 (bloc 2, seccion 2)
     }
 
-    public void initializeTreeBloc1Pagina1() {
+    /**
+     * Inicializa el TreeView de la página 1 de la sección 1 (Vuelos) del bloc 1
+     */
+    public void initializeTreeBloc1Seccion1Pagina1() {
         // Nodo raiz
         TreeItem<String> rootItem = new TreeItem<>();
 
@@ -177,9 +204,17 @@ public class aNoteController implements Initializable {
         treeBloc1Pagina1.getSelectionModel().select(branchItem1);
 //        treeBloc1Pagina1.getSelectionModel().selectedItemProperty().addListener(treeBloc1Pagina1_selectedItem);
         treeBloc1Pagina1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc1Pagina1_selectedItem((TreeItem<String>) newValue));
+
+        // Agrega las secciones al modelo de datos
+        blocs.blocs().get(0).add(new HashMap<>()); // Seccion Avion 1 (bloc 1)
+        blocs.blocs().get(0).get(0).put("title", "Avion 1");
+
     }
 
-    public void initializeTreeBloc1Pagina2() {
+    /**
+     * Inicializa el TreeView de la página 2 de la sección 1 (Meteorologia) del bloc 1
+     */
+    public void initializeTreeBloc1Seccion1Pagina2() {
         // Nodo raiz
         TreeItem<String> rootItem = new TreeItem<>();
 
@@ -203,9 +238,13 @@ public class aNoteController implements Initializable {
         rootItem.setExpanded(true);
         treeBloc1Pagina2.setShowRoot(false);
         treeBloc1Pagina2.getSelectionModel().select(branchItem1);
+        treeBloc1Pagina2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc1Pagina2_selectedItem((TreeItem<String>) newValue));
     }
 
-    public void initializeTreeBloc2Pagina1() {
+    /**
+     * Inicializa el TreeView de la página 1 de la sección 2 (Proyecto) del bloc 2
+     */
+    public void initializeTreeBloc1Seccion2Pagina1() {
         // Nodo raiz
         TreeItem<String> rootItem = new TreeItem<>();
 
@@ -229,9 +268,13 @@ public class aNoteController implements Initializable {
         rootItem.setExpanded(true);
         treeBloc2Pagina1.setShowRoot(false);
         treeBloc2Pagina1.getSelectionModel().select(branchItem1);
+        treeBloc1Pagina2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Pagina1_selectedItem((TreeItem<String>) newValue));
     }
 
-    public void initializeTreeBloc2Pagina2() {
+    /**
+     * Inicializa el TreeView de la página 2 de la sección 2 (FCT) del bloc 2
+     */
+    public void initializeTreeBloc1Seccion2Pagina2() {
         // Nodo raiz
         TreeItem<String> rootItem = new TreeItem<>();
 
@@ -255,15 +298,32 @@ public class aNoteController implements Initializable {
         rootItem.setExpanded(true);
         treeBloc2Pagina2.setShowRoot(false);
         treeBloc2Pagina2.getSelectionModel().select(branchItem1);
+        treeBloc1Pagina2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Pagina2_selectedItem((TreeItem<String>) newValue));
+    }
+
+    public void initializeTreeBloc2Seccion1Pagina1() {
+
+    }
+
+    public void initializeTreeBloc2Seccion1Pagina2() {
+
+    }
+
+    public void initializeTreeBloc2Seccion2Pagina1() {
+
+    }
+
+    public void initializeTreeBloc2Seccion2Pagina2() {
+
     }
 
     public void updateBlocs() {
         // Limpiar el ArrayList existente
-        blocs.clear();
+        blocs.blocs().clear();
 
         // Iterar sobre cada TabPane (bloc)
         for (TabPane tabPane : new TabPane[]{tbBloc1_paginas, tbBloc2_paginas}) {
-            ArrayList<HashMap<String, String>> bloc = new ArrayList<>();
+            ArrayList<HashMap<String, String>> seccion = new ArrayList<>();
 
             // Iterar sobre cada Tab (página) en el TabPane actual
             for (Tab tab : tabPane.getTabs()) {
@@ -278,11 +338,11 @@ public class aNoteController implements Initializable {
                 page.put("content", contentArea.getText());
 
                 // Agregar la página al bloc
-                bloc.add(page);
+                seccion.add(page);
             }
 
             // Agregar el bloc al ArrayList de blocs
-            blocs.add(bloc);
+            blocs.blocs().add(seccion);
         }
     }
 
@@ -323,16 +383,65 @@ public class aNoteController implements Initializable {
         int selectedIndex = treeBloc1Pagina1.getSelectionModel().getSelectedIndex();
 
         // Verifica si el índice es válido
-        if (selectedIndex >= 0 && selectedIndex < blocs.get(0).size()) {
+        if (selectedIndex >= 0 && selectedIndex < blocs.blocs().get(0).size()) {
             // Obtiene los datos de la página seleccionada
-            HashMap<String, String> pageData = blocs.get(0).get(selectedIndex);
+            HashMap<String, String> pageData = blocs.blocs().get(0).get(selectedIndex);
 
             // Carga los datos en los elementos gráficos
             txtBloc1_pag1_titulo.setText(pageData.get("title"));
 
             // Aquí debes agregar el código para cargar el contenido de la página en el área de texto correspondiente
-            
+            txtBloc1_pag1_contenido.setText(pageData.get("content"));
+        }
+    }
 
+    public void treeBloc1Pagina2_selectedItem(TreeItem<String> selectedItem) {
+        // Obtiene el índice del nodo seleccionado
+        int selectedIndex = treeBloc1Pagina2.getSelectionModel().getSelectedIndex();
+
+        // Verifica si el índice es válido
+        if (selectedIndex >= 0 && selectedIndex < blocs.blocs().get(0).size()) {
+            // Obtiene los datos de la página seleccionada
+            HashMap<String, String> pageData = blocs.blocs().get(0).get(selectedIndex);
+
+            // Carga los datos en los elementos gráficos
+            txtBloc1_pag2_titulo.setText(pageData.get("title"));
+
+            // Aquí debes agregar el código para cargar el contenido de la página en el área de texto correspondiente
+            txtBloc1_pag2_contenido.setText(pageData.get("content"));
+        }
+    }
+    public void treeBloc2Pagina1_selectedItem(TreeItem<String> selectedItem) {
+        // Obtiene el índice del nodo seleccionado
+        int selectedIndex = treeBloc2Pagina1.getSelectionModel().getSelectedIndex();
+
+        // Verifica si el índice es válido
+        if (selectedIndex >= 0 && selectedIndex < blocs.blocs().get(0).size()) {
+            // Obtiene los datos de la página seleccionada
+            HashMap<String, String> pageData = blocs.blocs().get(0).get(selectedIndex);
+
+            // Carga los datos en los elementos gráficos
+            txtBloc2_pag1_titulo.setText(pageData.get("title"));
+
+            // Aquí debes agregar el código para cargar el contenido de la página en el área de texto correspondiente
+            txtBloc2_pag1_contenido.setText(pageData.get("content"));
+        }
+    }
+
+    public void treeBloc2Pagina2_selectedItem(TreeItem<String> selectedItem) {
+        // Obtiene el índice del nodo seleccionado
+        int selectedIndex = treeBloc2Pagina2.getSelectionModel().getSelectedIndex();
+
+        // Verifica si el índice es válido
+        if (selectedIndex >= 0 && selectedIndex < blocs.blocs().get(0).size()) {
+            // Obtiene los datos de la página seleccionada
+            HashMap<String, String> pageData = blocs.blocs().get(0).get(selectedIndex);
+
+            // Carga los datos en los elementos gráficos
+            txtBloc2_pag2_titulo.setText(pageData.get("title"));
+
+            // Aquí debes agregar el código para cargar el contenido de la página en el área de texto correspondiente
+            txtBloc2_pag2_contenido.setText(pageData.get("content"));
         }
     }
 }

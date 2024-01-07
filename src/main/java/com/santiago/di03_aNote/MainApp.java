@@ -1,5 +1,6 @@
 package com.santiago.di03_aNote;
 
+import com.santiago.di03_aNote.controlador.aNoteController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

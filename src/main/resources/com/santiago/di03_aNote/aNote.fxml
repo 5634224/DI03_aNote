@@ -27,7 +27,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="900.0" prefHeight="730.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.santiago.di03_aNote.aNoteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="900.0" prefHeight="730.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.santiago.di03_aNote.controlador.aNoteController">
    <children>
       <MenuBar layoutX="46.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -700,7 +700,7 @@
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc1_pag1_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -735,7 +735,7 @@
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc1_pag2_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -782,7 +782,7 @@
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc2_pag1_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -817,7 +817,7 @@
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc2_pag2_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>

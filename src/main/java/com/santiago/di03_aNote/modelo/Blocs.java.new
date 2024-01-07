@@ -1,0 +1,27 @@
+package com.santiago.di03_aNote.modelo;
+
+public class Page {
+    private String title;
+    private String content;
+
+    // constructor, getters, setters
+}
+
+public class Section {
+    private ArrayList<Page> pages;
+
+    // constructor, getters, setters
+}
+
+public class Bloc {
+    private ArrayList<Section> sections;
+
+    public Bloc(ArrayList<Section> sections) {
+        if (sections == null) {
+            throw new IllegalArgumentException("sections no puede ser null");
+        }
+        this.sections = sections;
+    }
+
+    // getters, setters
+}
