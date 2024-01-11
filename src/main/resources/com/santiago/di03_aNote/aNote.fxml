@@ -689,18 +689,18 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TabPane fx:id="tbBloc1_paginas" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TabPane fx:id="tbBloc1_secciones" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <tabs>
                                   <Tab text="Vuelos">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
                                              <children>
-                                                <TextField fx:id="txtBloc1_pag1_titulo" onKeyTyped="#txtBloc1_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Avion 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                <TextField fx:id="txtBloc1_seccion1_tituloPagina" onKeyTyped="#txtBloc1_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Avion 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea fx:id="txtBloc1_pag1_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc1_seccion1_contenidoPagina" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -711,7 +711,7 @@
                                                          <graphic>
                                                             <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
                                                                <image>
-                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                                  <Image url="@img/nuevo documento/1x/baseline_post_add_black_24dp.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -719,7 +719,7 @@
                                                             <Insets left="30.0" />
                                                          </VBox.margin>
                                                       </Button>
-                                                      <TreeView fx:id="treeBloc1Pagina1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                      <TreeView fx:id="treeBloc1Seccion1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
                                                    </children>
                                                 </VBox>
                                              </children>
@@ -730,12 +730,12 @@
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
                                              <children>
-                                                <TextField fx:id="txtBloc1_pag2_titulo" onKeyTyped="#txtBloc1_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Hoy" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                <TextField fx:id="txtBloc1_seccion2_tituloPagina" onKeyTyped="#txtBloc1_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Hoy" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea fx:id="txtBloc1_pag2_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc1_seccion2_contenidoPagina" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -746,7 +746,7 @@
                                                          <graphic>
                                                             <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
                                                                <image>
-                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                                  <Image url="@img/nuevo documento/1x/baseline_post_add_black_24dp.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -754,7 +754,7 @@
                                                             <Insets left="30.0" />
                                                          </VBox.margin>
                                                       </Button>
-                                                      <TreeView fx:id="treeBloc1Pagina2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                      <TreeView fx:id="treeBloc1Seccion2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
                                                    </children>
                                                 </VBox>
                                              </children>
@@ -771,18 +771,18 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TabPane fx:id="tbBloc2_paginas" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TabPane fx:id="tbBloc2_secciones" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <tabs>
                                     <Tab text="Proyecto">
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
                                              <children>
-                                                <TextField fx:id="txtBloc2_pag1_titulo" onKeyTyped="#txtBloc2_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Idea 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                <TextField fx:id="txtBloc2_seccion1_tituloPagina" onKeyTyped="#txtBloc2_pag1_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Idea 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea fx:id="txtBloc2_pag1_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc2_seccion1_contenidoPagina" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -793,7 +793,7 @@
                                                          <graphic>
                                                             <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
                                                                <image>
-                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                                  <Image url="@img/nuevo documento/1x/baseline_post_add_black_24dp.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -801,7 +801,7 @@
                                                             <Insets left="30.0" />
                                                          </VBox.margin>
                                                       </Button>
-                                                      <TreeView fx:id="treeBloc2Pagina1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                      <TreeView fx:id="treeBloc2Seccion1" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
                                                    </children>
                                                 </VBox>
                                              </children>
@@ -812,12 +812,12 @@
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="main-backcolor">
                                              <children>
-                                                <TextField fx:id="txtBloc2_pag2_titulo" onKeyTyped="#txtBloc2_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Empresa 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                                <TextField fx:id="txtBloc2_seccion2_tituloPagina" onKeyTyped="#txtBloc2_pag2_onInputTyped" prefHeight="51.0" prefWidth="870.0" styleClass="text-field-titulo" text="Empresa 1" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font size="47.0" />
                                                    </font>
                                                 </TextField>
-                                                <TextArea fx:id="txtBloc2_pag2_contenido" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                                                <TextArea fx:id="txtBloc2_seccion2_contenidoPagina" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                                                    <padding>
                                                       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                                                    </padding>
@@ -828,7 +828,7 @@
                                                          <graphic>
                                                             <ImageView pickOnBounds="true" preserveRatio="true" styleClass="img-small">
                                                                <image>
-                                                                  <Image url="@img/nuevo%20documento/1x/baseline_post_add_black_24dp.png" />
+                                                                  <Image url="@img/nuevo documento/1x/baseline_post_add_black_24dp.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -836,7 +836,7 @@
                                                             <Insets left="30.0" />
                                                          </VBox.margin>
                                                       </Button>
-                                                      <TreeView fx:id="treeBloc2Pagina2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
+                                                      <TreeView fx:id="treeBloc2Seccion2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
                                                    </children>
                                                 </VBox>
                                              </children>

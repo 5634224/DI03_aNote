@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="No se donde me quedé" />
+    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Bloc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Blocs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/modelo/Blocs.java.new" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +67,7 @@
       <workItem from="1703882922665" duration="2950000" />
       <workItem from="1703939239459" duration="5109000" />
       <workItem from="1703958472235" duration="17839000" />
+      <workItem from="1704646246635" duration="53278000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <option name="closed" value="true" />
@@ -97,10 +107,33 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix" />
     <MESSAGE value="Proyecto restaurado" />
     <MESSAGE value="No se donde me quedé" />
-    <option name="LAST_COMMIT_MESSAGE" value="No se donde me quedé" />
+    <MESSAGE value="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
