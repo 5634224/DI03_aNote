@@ -18,7 +18,15 @@ import java.util.ResourceBundle;
 public class aNoteController implements Initializable {
 
     /*===================== CAMPOS MIOS =====================*/
+    /**
+     * ArrayList que contiene los datos de los blocs de notas
+     */
     ArrayList<Bloc> blocs = new ArrayList<Bloc>(new ArrayList<>());
+
+    /**
+     * HashMap que asocia cada nodo del TreeView con su correspondiente pagina
+     */
+    TreeViewPagesBinding pagesBinding = new TreeViewPagesBinding();
 
     /*===================== CAMPOS SCENEBUILDER =====================*/
     private Escenario stage;
@@ -208,23 +216,14 @@ public class aNoteController implements Initializable {
         blocs.get(0).sections().get(0).pages().add(new Page("Avion 2")); // Pagina Avion 2 (bloc 1, seccion 1)
         blocs.get(0).sections().get(0).pages().get(1).subpages().add(new Page("Detalles 2")); // Subpagina Detalles 2 (bloc 1, seccion 1)
 
-        // Binding del textField del titulo de la pagina con el titulo de la pagina en el modelo de datos
-        txtBloc1_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).title());
-        txtBloc1_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).subpages().get(0).title());
-        txtBloc1_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).title());
-        txtBloc1_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).subpages().get(0).title());
+        // Añade los binding de las paginas (modelo) con los treeItems
+        pagesBinding.bindBidirectional(branchItem1, blocs.get(0).sections().get(0).pages().get(0));
+        pagesBinding.bindBidirectional(leafItem1, blocs.get(0).sections().get(0).pages().get(0).subpages().get(0));
+        pagesBinding.bindBidirectional(branchItem2, blocs.get(0).sections().get(0).pages().get(1));
+        pagesBinding.bindBidirectional(leafItem2, blocs.get(0).sections().get(0).pages().get(1).subpages().get(0));
 
-        // Binding del textArea del contenido de la pagina con el contenido de la pagina en el modelo de datos
-        txtBloc1_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).content());
-        txtBloc1_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).subpages().get(0).content());
-        txtBloc1_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).content());
-        txtBloc1_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).subpages().get(0).content());
-
-        // Binding del titulo de la pagina del modelo con el título de la pagina en el treeView
-        branchItem1.valueProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).title());
-        leafItem1.valueProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(0).subpages().get(0).title());
-        branchItem2.valueProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).title());
-        leafItem2.valueProperty().bindBidirectional(blocs.get(0).sections().get(0).pages().get(1).subpages().get(0).title());
+        // Binding de la pagina (textField titulo + textArea contenido) con el modelo de datos
+        treeBloc1Seccion1_selectedPage(branchItem1);
     }
 
     /**
@@ -262,23 +261,14 @@ public class aNoteController implements Initializable {
         blocs.get(0).sections().get(1).pages().add(new Page("Mañana")); // Pagina Mañana (bloc 1, seccion 2)
         blocs.get(0).sections().get(1).pages().get(1).subpages().add(new Page("Detalles 2")); // Subpagina Detalles 2 (bloc 1, seccion 2)
 
-        // Binding del textField del titulo de la pagina con el titulo de la pagina en el modelo de datos
-        txtBloc1_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).title());
-        txtBloc1_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).subpages().get(0).title());
-        txtBloc1_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).title());
-        txtBloc1_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).subpages().get(0).title());
+        // Añade los binding de las paginas (modelo) con los treeItems
+        pagesBinding.bindBidirectional(branchItem1, blocs.get(0).sections().get(1).pages().get(0));
+        pagesBinding.bindBidirectional(leafItem1, blocs.get(0).sections().get(1).pages().get(0).subpages().get(0));
+        pagesBinding.bindBidirectional(branchItem2, blocs.get(0).sections().get(1).pages().get(1));
+        pagesBinding.bindBidirectional(leafItem2, blocs.get(0).sections().get(1).pages().get(1).subpages().get(0));
 
-        // Binding del textArea del contenido de la pagina con el contenido de la pagina en el modelo de datos
-        txtBloc1_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).content());
-        txtBloc1_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).subpages().get(0).content());
-        txtBloc1_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).content());
-        txtBloc1_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).subpages().get(0).content());
-
-        // Binding del titulo de la pagina del modelo con el título de la pagina en el treeView
-        branchItem1.valueProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).title());
-        leafItem1.valueProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).subpages().get(0).title());
-        branchItem2.valueProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).title());
-        leafItem2.valueProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(1).subpages().get(0).title());
+        // Binding de la pagina (textField titulo + textArea contenido) con el modelo de datos
+        treeBloc1Seccion2_selectedPage(branchItem1);
     }
 
     /**
@@ -308,7 +298,7 @@ public class aNoteController implements Initializable {
         rootItem.setExpanded(true);
         treeBloc2Seccion1.setShowRoot(false);
         treeBloc2Seccion1.getSelectionModel().select(branchItem1);
-        treeBloc1Seccion2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Seccion1_selectedPage((TreeItem<String>) newValue));
+        treeBloc2Seccion1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Seccion1_selectedPage((TreeItem<String>) newValue));
 
         // Crea las paginas en el modelo de datos
         blocs.get(1).sections().get(0).pages().add(new Page("Idea 1")); // Pagina Idea 1 (bloc 2, seccion 1)
@@ -316,23 +306,14 @@ public class aNoteController implements Initializable {
         blocs.get(1).sections().get(0).pages().add(new Page("Idea 2")); // Pagina Idea 2 (bloc 2, seccion 1)
         blocs.get(1).sections().get(0).pages().get(1).subpages().add(new Page("Detalles 2")); // Subpagina Detalles 2 (bloc 2, seccion 1)
 
-        // Binding del textField del titulo de la pagina con el titulo de la pagina en el modelo de datos
-        txtBloc2_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).title());
-        txtBloc2_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).subpages().get(0).title());
-        txtBloc2_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).title());
-        txtBloc2_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).subpages().get(0).title());
+        // Añade los binding de las paginas (modelo) con los treeItems
+        pagesBinding.bindBidirectional(branchItem1, blocs.get(1).sections().get(0).pages().get(0));
+        pagesBinding.bindBidirectional(leafItem1, blocs.get(1).sections().get(0).pages().get(0).subpages().get(0));
+        pagesBinding.bindBidirectional(branchItem2, blocs.get(1).sections().get(0).pages().get(1));
+        pagesBinding.bindBidirectional(leafItem2, blocs.get(1).sections().get(0).pages().get(1).subpages().get(0));
 
-        // Binding del textArea del contenido de la pagina con el contenido de la pagina en el modelo de datos
-        txtBloc2_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).content());
-        txtBloc2_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).subpages().get(0).content());
-        txtBloc2_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).content());
-        txtBloc2_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).subpages().get(0).content());
-
-        // Binding del titulo de la pagina del modelo con el título de la pagina en el treeView
-        branchItem1.valueProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).title());
-        leafItem1.valueProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).subpages().get(0).title());
-        branchItem2.valueProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).title());
-        leafItem2.valueProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(1).subpages().get(0).title());
+        // Binding de la pagina (textField titulo + textArea contenido) con el modelo de datos
+        treeBloc2Seccion1_selectedPage(branchItem1);
     }
 
     /**
@@ -362,7 +343,7 @@ public class aNoteController implements Initializable {
         rootItem.setExpanded(true);
         treeBloc2Seccion2.setShowRoot(false);
         treeBloc2Seccion2.getSelectionModel().select(branchItem1);
-        treeBloc1Seccion2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Seccion2_selectedPage((TreeItem<String>) newValue));
+        treeBloc2Seccion2.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> treeBloc2Seccion2_selectedPage((TreeItem<String>) newValue));
 
         // Crea las paginas en el modelo de datos
         blocs.get(1).sections().get(1).pages().add(new Page("Empresa 1")); // Pagina Empresa 1 (bloc 2, seccion 2)
@@ -370,23 +351,14 @@ public class aNoteController implements Initializable {
         blocs.get(1).sections().get(1).pages().add(new Page("Empresa 2")); // Pagina Empresa 2 (bloc 2, seccion 2)
         blocs.get(1).sections().get(1).pages().get(1).subpages().add(new Page("Detalles 2")); // Subpagina Detalles 2 (bloc 2, seccion 2)
 
-        // Binding del textField del titulo de la pagina con el titulo de la pagina en el modelo de datos
-        txtBloc2_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).title());
-        txtBloc2_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).subpages().get(0).title());
-        txtBloc2_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).title());
-        txtBloc2_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).subpages().get(0).title());
+        // Añade los binding de las paginas (modelo) con los treeItems
+        pagesBinding.bindBidirectional(branchItem1, blocs.get(1).sections().get(1).pages().get(0));
+        pagesBinding.bindBidirectional(leafItem1, blocs.get(1).sections().get(1).pages().get(0).subpages().get(0));
+        pagesBinding.bindBidirectional(branchItem2, blocs.get(1).sections().get(1).pages().get(1));
+        pagesBinding.bindBidirectional(leafItem2, blocs.get(1).sections().get(1).pages().get(1).subpages().get(0));
 
-        // Binding del textArea del contenido de la pagina con el contenido de la pagina en el modelo de datos
-        txtBloc2_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).content());
-        txtBloc2_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).subpages().get(0).content());
-        txtBloc2_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).content());
-        txtBloc2_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).subpages().get(0).content());
-
-        // Binding del titulo de la pagina del modelo con el título de la pagina en el treeView
-        branchItem1.valueProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).title());
-        leafItem1.valueProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).subpages().get(0).title());
-        branchItem2.valueProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).title());
-        leafItem2.valueProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(1).subpages().get(0).title());
+        // Binding de la pagina (textField titulo + textArea contenido) con el modelo de datos
+        treeBloc2Seccion2_selectedPage(branchItem1);
     }
 
 //    public void updateBlocs() {
@@ -424,7 +396,8 @@ public class aNoteController implements Initializable {
 //        TreeItem item = (TreeItem) treeBloc1Seccion1.getSelectionModel().getSelectedItem();
 //        if (item != null) item.setValue(txtBloc1_seccion1_tituloPagina.getText().toString());
 //        updateBlocs();
-        System.out.println(blocs);
+//        System.out.println(blocs);
+        System.out.println(blocs.get(0).sections().get(0).pages());
     }
 
     @FXML
@@ -433,7 +406,8 @@ public class aNoteController implements Initializable {
 //        TreeItem item = (TreeItem) treeBloc1Seccion2.getSelectionModel().getSelectedItem();
 //        if (item != null) item.setValue(txtBloc1_seccion2_tituloPagina.getText().toString());
 //        updateBlocs();
-        System.out.println(blocs);
+//        System.out.println(blocs);
+        System.out.println(blocs.get(0).sections().get(1).pages());
     }
 
     @FXML
@@ -442,7 +416,8 @@ public class aNoteController implements Initializable {
 //        MenuItem item = (MenuItem) treeBloc2Seccion1.getSelectionModel().getSelectedItem();
 //        if (item != null) item.setText(txtBloc2_seccion1_tituloPagina.getText().toString());
 //        updateBlocs();
-        System.out.println(blocs);
+//        System.out.println(blocs);
+        System.out.println(blocs.get(1).sections().get(0).pages());
     }
 
     @FXML
@@ -451,49 +426,71 @@ public class aNoteController implements Initializable {
 //        MenuItem item = (MenuItem) treeBloc2Seccion2.getSelectionModel().getSelectedItem();
 //        if (item != null) item.setText(txtBloc2_seccion2_tituloPagina.getText().toString());
 //        updateBlocs();
-        System.out.println(blocs);
+//        System.out.println(blocs);
+        System.out.println(blocs.get(1).sections().get(1).pages());
     }
 
     public void treeBloc1Seccion1_selectedPage(TreeItem<String> selectedItem) {
         // Obtiene el índice del nodo seleccionado
-        int selectedIndex = treeBloc1Seccion1.getSelectionModel().getSelectedIndex();
+//        int selectedIndex = treeBloc1Seccion1.getSelectionModel().getSelectedIndex();
+
+        // Binding de la pagina
+
+//        txtBloc1_seccion1_tituloPagina.textProperty().bind(selectedItem.valueProperty());
+//        txtBloc1_seccion1_contenidoPagina.textProperty().bind(pagesBinding.getPage(selectedItem).content());
+        txtBloc1_seccion1_tituloPagina.textProperty().unbind();
+        txtBloc1_seccion1_contenidoPagina.textProperty().unbind();
+        pagesBinding.getPage(selectedItem).title().bind(txtBloc1_seccion1_tituloPagina.textProperty());
+        pagesBinding.getPage(selectedItem).content().bind(txtBloc1_seccion1_contenidoPagina.textProperty());
 
         // Carga los datos en los elementos gráficos
-        txtBloc1_seccion1_tituloPagina.setText(blocs.get(0).sections().get(0).pages().get(0).title().get());
+//        txtBloc1_seccion1_tituloPagina.setText(blocs.get(0).sections().get(0).pages().get(0).title().get());
 
         // Cargar el contenido de la página en el área de texto correspondiente
-        txtBloc1_seccion1_contenidoPagina.setText(blocs.get(0).sections().get(0).pages().get(0).content().get());
+//        txtBloc1_seccion1_contenidoPagina.setText(blocs.get(0).sections().get(0).pages().get(0).content().get());
     }
 
     public void treeBloc1Seccion2_selectedPage(TreeItem<String> selectedItem) {
         // Obtiene el índice del nodo seleccionado
         int selectedIndex = treeBloc1Seccion2.getSelectionModel().getSelectedIndex();
 
+        // Binding de la pagina
+        txtBloc1_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).title());
+        txtBloc1_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(0).sections().get(1).pages().get(0).content());
+
         // Carga los datos en los elementos gráficos
-        txtBloc1_seccion2_tituloPagina.setText(blocs.get(0).sections().get(1).pages().get(0).title().get());
+//        txtBloc1_seccion2_tituloPagina.setText(blocs.get(0).sections().get(1).pages().get(0).title().get());
 
         // Cargar el contenido de la página en el área de texto correspondiente
-        txtBloc1_seccion2_contenidoPagina.setText(blocs.get(0).sections().get(1).pages().get(0).content().get());
+//        txtBloc1_seccion2_contenidoPagina.setText(blocs.get(0).sections().get(1).pages().get(0).content().get());
     }
     public void treeBloc2Seccion1_selectedPage(TreeItem<String> selectedItem) {
         // Obtiene el índice del nodo seleccionado
         int selectedIndex = treeBloc2Seccion1.getSelectionModel().getSelectedIndex();
 
+        // Binding de la pagina
+        txtBloc2_seccion1_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).title());
+        txtBloc2_seccion1_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(0).pages().get(0).content());
+
         // Carga los datos en los elementos gráficos
-        txtBloc2_seccion1_tituloPagina.setText(blocs.get(1).sections().get(0).pages().get(0).title().get());
+//        txtBloc2_seccion1_tituloPagina.setText(blocs.get(1).sections().get(0).pages().get(0).title().get());
 
         // Cargar el contenido de la página en el área de texto correspondiente
-        txtBloc2_seccion1_contenidoPagina.setText(blocs.get(1).sections().get(0).pages().get(0).content().get());
+//        txtBloc2_seccion1_contenidoPagina.setText(blocs.get(1).sections().get(0).pages().get(0).content().get());
     }
 
     public void treeBloc2Seccion2_selectedPage(TreeItem<String> selectedItem) {
         // Obtiene el índice del nodo seleccionado
         int selectedIndex = treeBloc2Seccion2.getSelectionModel().getSelectedIndex();
 
+        // Binding de la pagina
+        txtBloc2_seccion2_tituloPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).title());
+        txtBloc2_seccion2_contenidoPagina.textProperty().bindBidirectional(blocs.get(1).sections().get(1).pages().get(0).content());
+
         // Carga los datos en los elementos gráficos
-        txtBloc2_seccion2_tituloPagina.setText(blocs.get(1).sections().get(1).pages().get(0).title().get());
+//        txtBloc2_seccion2_tituloPagina.setText(blocs.get(1).sections().get(1).pages().get(0).title().get());
 
         // Cargar el contenido de la página en el área de texto correspondiente
-        txtBloc2_seccion2_contenidoPagina.setText(blocs.get(1).sections().get(1).pages().get(0).content().get());
+//        txtBloc2_seccion2_contenidoPagina.setText(blocs.get(1).sections().get(1).pages().get(0).content().get());
     }
 }

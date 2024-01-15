@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles.">
+    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/TreeViewPagesBinding.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" afterDir="false" />
     </list>
@@ -64,7 +65,10 @@
       <workItem from="1703882922665" duration="2950000" />
       <workItem from="1703939239459" duration="5109000" />
       <workItem from="1703958472235" duration="17839000" />
-      <workItem from="1704646246635" duration="62007000" />
+      <workItem from="1704646246635" duration="79038000" />
+      <workItem from="1705148169221" duration="941000" />
+      <workItem from="1705149778749" duration="10558000" />
+      <workItem from="1705188371355" duration="13332000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <option name="closed" value="true" />
@@ -106,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704937224380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)">
+      <option name="closed" value="true" />
+      <created>1705012359748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705012359748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,30 +140,61 @@
     <MESSAGE value="Proyecto restaurado" />
     <MESSAGE value="No se donde me quedé" />
     <MESSAGE value="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles." />
+    <MESSAGE value="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>444</line>
+          <line>418</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>435</line>
+          <line>408</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>426</line>
+          <line>398</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>453</line>
+          <line>428</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/MainApp.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>438</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>457</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>471</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>486</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
+          <line>443</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
