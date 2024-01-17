@@ -550,7 +550,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Acercar zoom" />
+                                    <Tooltip text="Seleccionar" />
                                  </tooltip>
                               </Button>
                               <Label layoutX="73.0" layoutY="91.0" styleClass="texto-descripcion-seccion" text="Selección" AnchorPane.bottomAnchor="0.0" />
@@ -563,7 +563,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Selección lazo" />
                                  </tooltip>
                               </Button>
                            </children>
@@ -584,7 +584,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Grosor muy fino" />
                                  </tooltip>
                               </Button>
                               <Button fx:id="btnLapizFino" contentDisplay="TOP" layoutX="91.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="boton-gris-rounded" text="Fino" textAlignment="CENTER">
@@ -596,7 +596,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Grosor fino" />
                                  </tooltip>
                               </Button>
                               <Button fx:id="btnLapizMedio" contentDisplay="TOP" layoutX="182.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="boton-gris-rounded" text="Medio" textAlignment="CENTER">
@@ -608,7 +608,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Grosor medio" />
                                  </tooltip>
                               </Button>
                               <Button fx:id="btnLapizGrueso" contentDisplay="TOP" layoutX="273.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="boton-gris-rounded" text="Grueso" textAlignment="CENTER">
@@ -620,7 +620,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Grosor grueso" />
                                  </tooltip>
                               </Button>
                               <Button fx:id="btnLapizExtraGrueso" contentDisplay="TOP" layoutX="364.0" minWidth="61.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="boton-gris-rounded" text="Extra" textAlignment="CENTER">
@@ -632,7 +632,7 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Grosor extragrueso" />
                                  </tooltip>
                               </Button>
                            </children>
@@ -656,12 +656,12 @@
                                     </ImageView>
                                  </graphic>
                                  <tooltip>
-                                    <Tooltip text="Alejar zoom" />
+                                    <Tooltip text="Borrador" />
                                  </tooltip>
                               </Button>
                               <ColorPicker fx:id="colorPickerLapiz" layoutX="88.0" prefHeight="80.0" prefWidth="106.0" promptText="Color" styleClass="boton-gris-rounded">
                                  <tooltip>
-                                    <Tooltip text="Color del texto" />
+                                    <Tooltip text="Color del pincel" />
                                  </tooltip>
                               </ColorPicker>
                            </children>
