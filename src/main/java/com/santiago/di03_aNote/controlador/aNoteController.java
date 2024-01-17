@@ -109,16 +109,6 @@ public class aNoteController implements Initializable {
     @FXML
     private CheckBox checkBoxBarraEstado;
     @FXML
-    private Button btnZoomAcercar1;
-    @FXML
-    private Button btnZoomAlejar1;
-    @FXML
-    private Button btnZoom100x1001;
-    @FXML
-    private CheckBox checkBoxRegla1;
-    @FXML
-    private CheckBox checkBoxBarraEstado1;
-    @FXML
     private TabPane tbBlocs;
     @FXML
     private TabPane tbBloc1_secciones;
@@ -148,6 +138,24 @@ public class aNoteController implements Initializable {
     private TextArea txtBloc2_seccion1_contenidoPagina;
     @FXML
     private TextArea txtBloc2_seccion2_contenidoPagina;
+    @FXML
+    private Button btnSeleccionarPuntero;
+    @FXML
+    private Button btnSeleccionLazo;
+    @FXML
+    private Button btnLapizMuyFIno;
+    @FXML
+    private Button btnLapizFino;
+    @FXML
+    private Button btnLapizMedio;
+    @FXML
+    private Button btnLapizGrueso;
+    @FXML
+    private Button btnLapizExtraGrueso;
+    @FXML
+    private Button btnDibujoBorrador;
+    @FXML
+    private ColorPicker colorPickerLapiz;
 
     /*==================== MÉTODOS ====================*/
     public void setStage(Escenario stage) {

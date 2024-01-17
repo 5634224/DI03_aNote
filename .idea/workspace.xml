@@ -4,10 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/TreeViewPagesBinding.java" afterDir="false" />
+    <list default="true" id="a268fef3-085f-40a8-b67a-5c744899f658" name="Changes" comment="Últimos cambios de diseño en aNote">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Drawing/1x/draw_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Drawing/2x/draw_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 1/1x/pen_size_1_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 1/2x/pen_size_1_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 2/1x/pen_size_2_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 2/2x/pen_size_2_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 3/1x/pen_size_3_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 3/2x/pen_size_3_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 4/1x/pen_size_4_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 4/2x/pen_size_4_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 5/1x/pen_size_5_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Pen Size 5/2x/pen_size_5_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Stylus/1x/stylus_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Pencil/Stylus/2x/stylus_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Puntero raton/1x/arrow_selector_tool_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/Puntero raton/2x/arrow_selector_tool_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/añadir/1x/baseline_add_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/añadir/2x/baseline_add_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/borrador/1x/ink_eraser_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/borrador/2x/ink_eraser_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/lazo/1x/lasso_select_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/lazo/2x/lasso_select_FILL0_wght400_GRAD0_opsz48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/img/regla/square_foot_FILL0_wght400_GRAD0_opsz24.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/santiago/di03_aNote/aNote.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +91,9 @@
       <workItem from="1704646246635" duration="79038000" />
       <workItem from="1705148169221" duration="941000" />
       <workItem from="1705149778749" duration="10558000" />
-      <workItem from="1705188371355" duration="13332000" />
+      <workItem from="1705188371355" duration="18004000" />
+      <workItem from="1705403731684" duration="1816000" />
+      <workItem from="1705457729058" duration="1287000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <option name="closed" value="true" />
@@ -118,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705012359748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambios en el binding">
+      <option name="closed" value="true" />
+      <created>1705335675354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705335675354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,29 +174,31 @@
     <MESSAGE value="No se donde me quedé" />
     <MESSAGE value="Refactorizacion para incluir patron MVC y cambiar nombres de variables a otros más descriptivos y comprensibles." />
     <MESSAGE value="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion binding (Ahora sí se ve claramente que el binding no funciona como quiero y que afecta a todo)" />
+    <MESSAGE value="Cambios en el binding" />
+    <MESSAGE value="Últimos cambios de diseño en aNote" />
+    <option name="LAST_COMMIT_MESSAGE" value="Últimos cambios de diseño en aNote" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>418</line>
+          <line>426</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>408</line>
+          <line>416</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>398</line>
+          <line>406</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>428</line>
+          <line>436</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -173,27 +208,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>438</line>
+          <line>446</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>457</line>
+          <line>465</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>471</line>
+          <line>479</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>486</line>
+          <line>494</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/santiago/di03_aNote/controlador/aNoteController.java</url>
-          <line>443</line>
+          <line>451</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
